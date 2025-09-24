@@ -1,0 +1,45 @@
+{
+  "companyId": 1,
+  "bankAccount": "MainBank",
+  "reconciliationDate": "2025-01-31",
+  "balances": {
+    "ledgerBalance": 22500,
+    "bankStatementBalance": 19000
+  },
+  "reconcilingItems": {
+    "addToBank": {
+      "description": "Cheques issued but not yet presented",
+      "items": [
+        {
+          "id": 3,
+          "date": "2025-01-10T00:00:00.000Z",
+          "reference": "CHQ102",
+          "party": "Supplier A",
+          "description": "Purchase inventory",
+          "amount": 3000
+        }
+      ],
+      "total": 3000
+    },
+    "deductFromLedger": {
+      "description": "Bank charges not yet recorded in ledger",
+      "items": [
+        {
+          "id": 9,
+          "date": "2025-01-28T00:00:00.000Z",
+          "reference": "CHQ104",
+          "party": "BigBank",
+          "description": "Monthly service charge",
+          "amount": 500
+        }
+      ],
+      "total": 500
+    }
+  },
+  "adjustedBalances": {
+    "adjustedLedgerBalance": 22000,
+    "adjustedBankBalance": 22000,
+    "difference": 0
+  },
+  "reconciliationStatus": "Reconciled"
+}

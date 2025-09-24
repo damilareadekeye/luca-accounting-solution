@@ -1,0 +1,85 @@
+PS C:\Users\Aorus15\Documents\GitHub\My-Credentials\CVs-and-Resumes\Works applied to and tailored Resume\AI Work\luca-accounting-solution>
+ node test-api.js
+Testing APIs...
+
+1. Cash Flow Statement API:
+   Endpoint: GET /api/cashflow?companyid=1&fromDate=2025-01-01&toDate=2025-01-31
+   Response: {
+  "companyId": 1,
+  "period": {
+    "from": "2025-01-01",
+    "to": "2025-01-31"
+  },
+  "cashFlowStatement": {
+    "operatingActivities": {
+      "inflows": 8000,
+      "outflows": 6000,
+      "netCashFromOperating": 2000
+    },
+    "investingActivities": {
+      "inflows": 0,
+      "outflows": 0,
+      "netCashFromInvesting": 0
+    },
+    "financingActivities": {
+      "inflows": 17000,
+      "outflows": 7000,
+      "netCashFromFinancing": 10000
+    },
+    "summary": {
+      "openingCashBalance": 0,
+      "netChangeInCash": 12000,
+      "closingCashBalance": 12000
+    }
+  }
+}
+
+================================================================================
+
+2. Bank Reconciliation Statement API:
+   Endpoint: GET /api/reconciliation?companyid=1&bankaccount=MainBank
+   Response: {
+  "companyId": 1,
+  "bankAccount": "MainBank",
+  "reconciliationDate": "2025-01-31",
+  "balances": {
+    "ledgerBalance": 22500,
+    "bankStatementBalance": 19000
+  },
+  "reconcilingItems": {
+    "addToBank": {
+      "description": "Cheques issued but not yet presented",
+      "items": [
+        {
+          "id": 3,
+          "date": "2025-01-09T23:00:00.000Z", 
+          "reference": "CHQ102",
+          "party": "Supplier A",
+          "description": "Purchase inventory",
+          "amount": 3000
+        }
+      ],
+      "total": 3000
+    },
+    "deductFromLedger": {
+      "description": "Bank charges not yet recorded in ledger",
+      "items": [
+        {
+          "id": 9,
+          "date": "2025-01-27T23:00:00.000Z", 
+          "reference": "CHQ104",
+          "description": "Monthly service charge",
+          "amount": 500
+        }
+      ],
+      "total": 500
+    }
+  },
+  "adjustedBalances": {
+    "adjustedLedgerBalance": 22000,
+    "adjustedBankBalance": 22000,
+    "difference": 0
+  },
+  "reconciliationStatus": "Reconciled"
+}
+PS C:\Users\Aorus15\Documents\GitHub\My-Credentials\CVs-and-Resumes\Works applied to and tailored Resume\AI Work\luca-accounting-solution>

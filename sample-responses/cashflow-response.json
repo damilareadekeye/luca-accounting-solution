@@ -1,0 +1,29 @@
+{
+  "companyId": 1,
+  "period": {
+    "from": "2025-01-01",
+    "to": "2025-01-31"
+  },
+  "cashFlowStatement": {
+    "operatingActivities": {
+      "inflows": 8000,
+      "outflows": 6000,
+      "netCashFromOperating": 2000
+    },
+    "investingActivities": {
+      "inflows": 0,
+      "outflows": 0,
+      "netCashFromInvesting": 0
+    },
+    "financingActivities": {
+      "inflows": 17000,
+      "outflows": 0,
+      "netCashFromFinancing": 17000
+    },
+    "summary": {
+      "openingCashBalance": 0,
+      "netChangeInCash": 19000,
+      "closingCashBalance": 19000
+    }
+  }
+}
